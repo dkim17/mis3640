@@ -32,3 +32,12 @@ print(total_time)
 difference = 89-82
 percent_increase = difference/82*100
 print('Percent increase is {:.2f}%'.format(percent_increase))
+
+#Quadratic
+def quadratic(a, b, c):
+    a= type(int())
+    b= type(int())
+    c= type(int())
+    root = quadratic(b**b-4*a*c)
+
+print(quadratic)
