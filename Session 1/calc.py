@@ -34,10 +34,14 @@ percent_increase = difference/82*100
 print('Percent increase is {:.2f}%'.format(percent_increase))
 
 #Quadratic
+import math
 def quadratic(a, b, c):
-    a= type(int())
-    b= type(int())
-    c= type(int())
-    root = quadratic(b**b-4*a*c)
+    discriminant = b**b-4*a*c
+   
+    if discriminant >= 0: 
+        x_1 = ((-b + math.sqrt(discriminant)/2*a))
+        x_2 = ((-b + math.sqrt(discriminant)/2*a))
+        return x_1, x_2
+    
+print (quadratic(1,4,1))
 
-print(quadratic)
