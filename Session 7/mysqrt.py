@@ -9,11 +9,16 @@ def mysqrt(a, x):
             break
         x = y
 
-print(mysqrt(100, 3))
+for a in range (1,10):
+    x = a *2
 
+print(mysqrt(a, x))
+print(math.sqrt(a))
 math.sqrt(96)
 
-for i in range(30):
-    print(mysqrt)
+diff = 'mysqrt(a)' - 'math.sqrt(a)'
+
+
+
 
 
