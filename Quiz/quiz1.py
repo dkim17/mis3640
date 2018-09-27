@@ -41,8 +41,8 @@ def detect(a, b, n):
     """
     if a = n or b = n:
         return True
-        while a+b = n or a*b = n:
-            return False
+    elif a+b = n or a*b = n:
+        return False
 
 
 
