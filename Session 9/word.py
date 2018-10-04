@@ -66,8 +66,8 @@ def uses_only(word, available):
 
 
 
-print(uses_only('Babson', 'aBbsonxyz'))
-print(uses_only('college', 'aBbsonxyz'))
+# print(uses_only('Babson', 'aBbsonxyz'))
+# print(uses_only('college', 'aBbsonxyz'))
 
 
 def uses_all(word, required):
@@ -76,36 +76,83 @@ def uses_all(word, required):
      and that returns True if
     the word uses all the required letters at least once.
     """
-    for letter in word:
-        if letter in required:
-            return True
-    return False
+    for letter in required:
+        if letter not in word:
+            return False
+    return True
+    return uses_only(required, word)
 
 
-print(uses_all('Babson', 'abs'))
-print(uses_all('college', 'abs'))
+# return uses_only(required, word)
 
+# print(uses_all('Babson', 'abs'))
+# print(uses_all('college', 'abs'))
+
+def find_words_using_all_vowels():
+    fin = open('Session 9/words.txt')
+    counter = 0
+    for line in fin:
+        word = line.strip()
+        if uses_all(word, 'aeiou'):
+            print(word)
+            counter +=1
+    return counter
+    
+# print('The number of words that use all the vowels:', find_words_using_all_vowels())
+
+
+# def is_abecedarian(word):
+#     """
+#     returns True if the letters in a word appear in 
+#     alphabetical order
+#     (double letters are ok).
+#     """
+#     index = 0
+#     while index < len(word) -1:
+#         if word[index] > word[index +1]:
+#             return False
+#         else: 
+#             index +=1
+#     return True
+
+# count = 0
+# for line in fin:
+#     if is_abecedarian(word):
+#         count += 1
+# print('There are {} abecedarian words.'.format(count)) 
+
+
+# print(is_abecedarian('abs'))
+# print(is_abecedarian('college'))
 
 def is_abecedarian(word):
     """
-    returns True if the letters in a word appear in 
-    alphabetical order
+    returns True if the letters in a word appear in alphabetical order
     (double letters are ok).
     """
-    index = 0
-    while index < len(word) -1:
-        if word[index] > word[index +1]:
+    before = word[0]
+    for letter in word:
+        if letter < before:
             return False
-        else: 
-            index +=1
+        before = letter
     return True
 
-count = 0
-for line in fin:
-    if is_abecedarian(word):
-        count += 1
-print('There are {} abecedarian words.'.format(count)) 
+
+# print(is_abecedarian('abs'))
+# print(is_abecedarian('college'))
+
+def find_abecedarian_words():
+    fin = open('Session 9/words.txt')
+    counter = 0
+    current_longest_word = ''
+    for line in fin:
+        word = line.strip()
+        if is_abecedarian(word):
+            print(word)
+            counter +=1
+            if len(word) > len(current_longest_word):
+                current_longest_word = word
+    return counter, current_longest_word
 
 
-print(is_abecedarian('abs'))
-print(is_abecedarian('college'))
+print(find_abecedarian_words())
