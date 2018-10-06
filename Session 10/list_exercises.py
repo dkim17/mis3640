@@ -24,11 +24,14 @@ def cumsum(t):
     [1, 3, 6]
     """
     sum = 0 
-    cum_sum = []
+    rep = []
     for i in t:
         sum += i
-        cumsum.append(sum)
-    return sum
+        rep.append(sum)
+        print('current list:')
+        print(rep)
+    return rep
+
 
 
 def middle(t):
@@ -40,7 +43,7 @@ def middle(t):
     >>> middle(t)
     [2, 3]
     """
-    return t[1:3]
+    return t[1:-1]
 
 
 
@@ -54,11 +57,10 @@ def chop(t):
     >>> t
     [2, 3]
     """
-    del t[0] and
-    del t[3]
-    return t
+    del t[0]
+    del t[-1]
 
-
+    
 
 def is_sorted(t):
     """Checks whether a list is sorted.
@@ -70,10 +72,17 @@ def is_sorted(t):
     >>> is_sorted(['b', 'a'])
     False
     """
-    for i in range (len(t)  -1):
-        if t[i] > t[i+1]:
-            return False
-    return True
+    # previous = t[0]
+    # for i in range t:
+    #     if i < previous:
+    #         return False
+    #     previous = i
+    # return True
+    return t == sorted(t)
+
+print(is_sorted(['a', 'b', 'c', 'b']))
+    
+ 
 
 
 
@@ -110,8 +119,8 @@ def has_duplicates(s):
     >>> print(has_duplicates('abba'))
     True
     """
-    for i in range(len(s)-1):
-        if s[i] in s[i + 1:len(s)]:
+    for i in s:
+        if s.count(i) > 1:
             return True
     return False
 
