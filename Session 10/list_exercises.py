@@ -146,25 +146,25 @@ def has_adjacent_duplicates(s):
 
 def main():
     t = [[1, 2], [3], [4, 5, 6]]
-    # print(nested_sum(t))
+    print(nested_sum(t))
 
-    # t = [1, 2, 3]
-    # print(cumsum(t))
+    t = [1, 2, 3]
+    print(cumsum(t))
 
-    # t = [1, 2, 3, 4]
-    # print(middle(t))
-    # chop(t)
-    # print(t)
+    t = [1, 2, 3, 4]
+    print(middle(t))
+    chop(t)
+    print(t)
 
-    # print(is_sorted([1, 2, 2]))
-    # print(is_sorted(['b', 'a']))
+    print(is_sorted([1, 2, 2]))
+    print(is_sorted(['b', 'a']))
 
-    # print(is_anagram('stop', 'pots'))
-    # print(is_anagram('different', 'letters'))
-    # print(is_anagram([1, 2, 2], [2, 1, 2]))
+    print(is_anagram('stop', 'pots'))
+    print(is_anagram('different', 'letters'))
+    print(is_anagram([1, 2, 2], [2, 1, 2]))
 
-    # print(has_duplicates('cba'))
-    # print(has_duplicates('abba'))
+    print(has_duplicates('cba'))
+    print(has_duplicates('abba'))
 
 
 if __name__ == '__main__':

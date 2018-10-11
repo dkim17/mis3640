@@ -129,3 +129,36 @@ def has_duplicates(s):
         if s.count(i) > 1:
             return True
     return False
+
+
+
+numbers = [2, 0, 1, 6, 9]
+
+for i in range(len(numbers)):
+    numbers[i] = numbers[i] * 2
+    
+print(numbers)
+
+my_list = ['spam', 1, ['New England Patriots', \
+                       'Buffalo Bills', 'Miami Dolphins', \
+                       'New York Giants'], \
+           [1, 2, 3]]
+print(len(my_list))
+
+a = [1, 2, 3]
+b = [4, 5, 6]
+c = a + b
+print(c)
+
+t = [1, 2, 3]
+print(sum(t))
+
+team = 'New England Patriots'
+t = team.split()
+print(t)
+
+s = 'spam-spam-spam'
+delimiter = '-'
+t = s.split(delimiter)
+print(t)
+
