@@ -39,8 +39,11 @@ print(number_of_a)
 #         d.get(c, 0)
 
 def print_hist(h):
-    for c in h:
-        print(c, h[c])
+    for letter not in d:
+        d[letter] = 1
+    else: 
+        d[letter] += 1
+    
         
 h = histogram('Massachusetts')
 print_hist(h)
