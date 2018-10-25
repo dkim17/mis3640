@@ -24,10 +24,15 @@
 
 # walk(folder)
 
-import pickle
+# import pickle
 
-t1 = [1,2,3]
+# t1 = [1,2,3]
 
-f = open('save.p', 'wb')
-s = pickle.dump(t1, f)
-f.close()
+# f = open('save.p', 'wb')
+# s = pickle.dump(t1, f)
+# f.close()
+
+t2 = pickle.load(open('save.p', 'rb'))
+print(t2)
+
+print(t1 == t2)
